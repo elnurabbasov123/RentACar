@@ -5,6 +5,7 @@ import model.Customer;
 import service.inter.CustomerService;
 import util.InputUtil;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class CustomerServiceImpl implements CustomerService {
     CarServiceImpl carService=new CarServiceImpl();
@@ -20,7 +21,7 @@ public class CustomerServiceImpl implements CustomerService {
         customer.setFin(fin);
         String serialNumberPassword = InputUtil.requiredText("Enter serialNumberPassword :");
         customer.setSerialNumberPassword(serialNumberPassword);
-        String birthDate = InputUtil.requiredText("Enter birthDate :");
+        LocalDate birthDate = LocalDate.parse(InputUtil.requiredText("Enter birthDate :"));
         customer.setBirthdate(birthDate);
         System.out.println("Choose the car :");
         carService.showNoOrderCarsAndPrint();

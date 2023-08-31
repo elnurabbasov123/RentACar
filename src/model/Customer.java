@@ -8,13 +8,13 @@ public class Customer {
     private String surname;
     private String fin;
     private String serialNumberPassword;
-    private String birthdate;
+    private LocalDate birthdate;
     private int carId;
 
     public Customer(){
 
     }
-    public Customer(String name, String surname, String fin, String serialNumberPassword, String birthdate, int carId) {
+    public Customer(String name, String surname, String fin, String serialNumberPassword, LocalDate birthdate, int carId) {
         this.name = name;
         this.surname = surname;
         this.fin = fin;
@@ -55,11 +55,11 @@ public class Customer {
         this.serialNumberPassword = serialNumberPassword;
     }
 
-    public String getBirthdate() {
+    public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(String birthdate) {
+    public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
 

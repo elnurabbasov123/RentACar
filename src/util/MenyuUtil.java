@@ -27,9 +27,8 @@ public class MenyuUtil {
         while(true){
             Scanner sc = new Scanner(System.in);
             System.out.println("----Car Ordering System----");
-            System.out.println("Entry menyu option : ");
             MenyuUtil.showMenyu();
-            int option = sc.nextInt();
+            int option = InputUtil.requiredNumber("Entry menyu option :");
 
             switch (option) {
                 case 0:
